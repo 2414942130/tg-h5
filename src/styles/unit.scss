@@ -1,0 +1,443 @@
+.font-b {
+  font-weight: bold;
+}
+.font-w500 {
+  font-weight: 500;
+}
+.min-w-240 {
+  min-width: 240px;
+}
+
+.oy-hide {
+  overflow-y: hidden;
+}
+
+.ox-hide {
+  overflow-x: hidden;
+}
+
+.o-hide {
+  overflow: hidden;
+}
+
+.app-icon-img {
+  height: 36px;
+  width: 36px;
+  border-radius: 8px;
+  overflow: hidden;
+  &--large {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+}
+
+.word-bread {
+  word-break: break-all;
+}
+
+.max-w-60 {
+  max-width: 60%;
+}
+
+@each $i in 12, 14, 16, 18, 20, 24, 28, 30, 32, 36, 64 {
+  .font-s#{$i} {
+    font-size: 1px * $i;
+  }
+}
+
+@each $p in l, r, x, y, xy, b, t {
+  @each $i in 0, 4, 5, 6, 8, 10, 11, 12, 13, 15, 16, 18, 20, 24, 26, 30, 32, 36, 50 {
+    .m#{$p}-#{$i} {
+      @if $p == l {
+        margin-left: #{$i}px;
+      }
+      @if $p == r {
+        margin-right: #{$i}px;
+      }
+      @if $p == x {
+        margin-left: #{$i}px;
+        margin-right: #{$i}px;
+      }
+      @if $p == y {
+        margin-top: #{$i}px;
+        margin-bottom: #{$i}px;
+      }
+      @if $p == xy {
+        margin: #{$i}px;
+      }
+      @if $p == b {
+        margin-bottom: #{$i}px;
+      }
+      @if $p == t {
+        margin-top: #{$i}px;
+      }
+    }
+
+    .p#{$p}-#{$i} {
+      @if $p == l {
+        padding-left: #{$i}px;
+      }
+      @if $p == r {
+        padding-right: #{$i}px;
+      }
+      @if $p == x {
+        padding-left: #{$i}px;
+        padding-right: #{$i}px;
+      }
+      @if $p == y {
+        padding-top: #{$i}px;
+        padding-bottom: #{$i}px;
+      }
+      @if $p == xy {
+        padding: #{$i}px;
+      }
+      @if $p == b {
+        padding-bottom: #{$i}px;
+      }
+      @if $p == t {
+        padding-top: #{$i}px;
+      }
+    }
+  }
+}
+
+@each $r in 4, 6, 8, 10, 12, 16 {
+  .radius-#{$r} {
+    border-radius: 1px * $r;
+  }
+  .radius-#{$r}i {
+    border-radius: 1px * $r !important;
+  }
+}
+
+@each $w in 240, 294, 296, 600, 800 {
+  .w-#{$w} {
+    width: 1px * $w;
+  }
+  .w-#{$w}i {
+    width: 1px * $w !important;
+  }
+}
+
+@each $i in 19, 21, 24, 27, 30, 32, 39 {
+  .h-lh#{$i} {
+    height: 1px * $i;
+    line-height: 1px * $i;
+  }
+}
+
+.text-secondary {
+  color: #999999;
+}
+.text-s-black {
+  color: #434343;
+}
+.text-primary {
+  color: #007dfe;
+}
+
+.bg-light-grey {
+  background-color: #f9f9f9;
+}
+
+.text-main {
+  color: #2b2b2b;
+}
+
+.flex-ellipsis {
+  flex: 1;
+  width: 1px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.flex {
+  display: flex;
+}
+.flex-1 {
+  flex: 1;
+}
+.align-c {
+  align-items: center;
+}
+.align-end {
+  align-items: flex-end;
+}
+.flex-end {
+  justify-content: flex-end;
+}
+.space-b {
+  justify-content: space-between;
+}
+.justify-c {
+  justify-content: center;
+}
+.not-shrirk {
+  flex-shrink: 0;
+}
+.not-shrink {
+  flex-shrink: 0;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.fill-h {
+  height: 100%;
+}
+.fill-w {
+  width: 100%;
+}
+.font-b {
+  font-weight: bold;
+}
+
+@each $i in 12, 14, 16, 18, 20, 21, 24, 28, 30, 32, 36, 40, 48, 64 {
+  .font-s#{$i} {
+    font-size: 1px * $i;
+  }
+}
+
+@each $h in 10, 12, 16, 20, 30, 40, 60, 100, 120, 240, 320, 800, 900, 1000, 1200 {
+  @each $p in w, h {
+    .#{$p}-#{$h} {
+      @if $p == w {
+        width: 1px * $h;
+      }
+      @if $p == h {
+        height: 1px * $h;
+      }
+    }
+    .#{$p}-#{$h}i {
+      @if $p == w {
+        width: 1px * $h !important;
+      }
+      @if $p == h {
+        height: 1px * $h !important;
+      }
+    }
+    .max-#{$p}-#{$h} {
+      @if $p == w {
+        max-width: 1px * $h;
+      }
+      @if $p == h {
+        max-height: 1px * $h;
+      }
+    }
+  }
+}
+
+@each $p in l, r, x, y, xy, b, t {
+  @each $i in 2, 4, 6, 8, 10, 11, 12, 14, 16, 20, 22, 24, 26, 28, 30, 34, 40, 48, 60, 68, 100 {
+    .m#{$p}-#{$i} {
+      @if $p == l {
+        margin-left: #{$i}px;
+      }
+      @if $p == r {
+        margin-right: #{$i}px;
+      }
+      @if $p == x {
+        margin-left: #{$i}px;
+        margin-right: #{$i}px;
+      }
+      @if $p == y {
+        margin-top: #{$i}px;
+        margin-bottom: #{$i}px;
+      }
+      @if $p == xy {
+        margin: #{$i}px;
+      }
+      @if $p == b {
+        margin-bottom: #{$i}px;
+      }
+      @if $p == t {
+        margin-top: #{$i}px;
+      }
+    }
+
+    .p#{$p}-#{$i} {
+      @if $p == l {
+        padding-left: #{$i}px;
+      }
+      @if $p == r {
+        padding-right: #{$i}px;
+      }
+      @if $p == x {
+        padding-left: #{$i}px;
+        padding-right: #{$i}px;
+      }
+      @if $p == y {
+        padding-top: #{$i}px;
+        padding-bottom: #{$i}px;
+      }
+      @if $p == xy {
+        padding: #{$i}px;
+      }
+      @if $p == b {
+        padding-bottom: #{$i}px;
+      }
+      @if $p == t {
+        padding-top: #{$i}px;
+      }
+    }
+  }
+}
+
+@each $r in 6, 8, 10, 12, 16 {
+  .radius-#{$r} {
+    border-radius: 1px * $r;
+  }
+  .radius-#{$r}i {
+    border-radius: 1px * $r !important;
+  }
+}
+
+@each $w in 180, 210, 240, 294, 600 {
+  .w-#{$w} {
+    width: 1px * $w;
+  }
+  .w-#{$w}i {
+    width: 1px * $w !important;
+  }
+}
+
+@each $w in 'pointer', 'auto' {
+  .cursor-#{$w} {
+    cursor: #{$w};
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.flex {
+  display: flex;
+}
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.align-c {
+  align-items: center;
+}
+.flex-end {
+  justify-content: flex-end;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.space-b {
+  justify-content: space-between;
+}
+.justify-c {
+  justify-content: center;
+}
+.pointer {
+  cursor: pointer;
+}
+.p-absolute {
+  position: absolute;
+}
+.p-relative {
+  position: relative;
+}
+.pos-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.action {
+  margin-bottom: 20px;
+  .ant-btn {
+    margin-right: 10px !important;
+  }
+}
+
+.hover-blue {
+  &:hover {
+    background-color: #e6f7ff;
+  }
+}
+
+.no_copy {
+  moz-user-select: -moz-none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.tight-card-tabs {
+  &.el-tabs {
+    .el-tabs__header {
+      margin: 0;
+      border-bottom: none;
+    }
+    .el-tabs__item {
+      background-color: #ffffff;
+    }
+  }
+}
+
+.min-w-104 {
+  min-width: 104px;
+}
+.min-h-120 {
+  min-height: 120px;
+}
+
+.link-text {
+  color: getCssVar('color-primary');
+  cursor: pointer;
+}
+.not-shirk {
+  flex-shrink: 0;
+}
+.move {
+  cursor: move;
+}
+
+@each $i in 1, 2, 3 {
+  .ellipsis-#{$i} {
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $i;
+    -webkit-box-orient: vertical;
+    display: -moz-box;
+    -moz-line-clamp: $i;
+    word-wrap: break-word;
+    word-break: break-all;
+    white-space: normal;
+    overflow: hidden;
+  }
+}
+
+.text-success {
+  color: var(--cus-success-color);
+}
+.text-danger {
+  color: var(--cus-danger-color);
+}
+.text-warning {
+  color: var(--cus-warning-color);
+}

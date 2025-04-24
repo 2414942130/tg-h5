@@ -1,0 +1,52 @@
+:root {
+  --cus-menu--active-bg-color: #172b65;
+  --cus-menu-bg-color: #0c193d;
+  --cus-success-color: #67c23a;
+  --cus-danger-color: #f56c6c;
+  --cus-warning-color: #e6a23c;
+}
+
+html,
+body,
+#app {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family:
+    'Microsoft YaHei',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    'Helvetica Neue',
+    Arial,
+    'Noto Sans',
+    sans-serif,
+    'Apple Color Emoji',
+    'Segoe UI Emoji',
+    'Segoe UI Symbol',
+    'Noto Color Emoji';
+  color: getCssVar('text-color-primary');
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+/* 解决 h1 标签在 webkit 内核浏览器中文字大小失效问题 */
+:-webkit-any(article, aside, nav, section) h1 {
+  font-size: 2em;
+}
+
+.shield {
+  position: absolute;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  // background-color: rgba(1, 12, 52, 0.5);
+}
